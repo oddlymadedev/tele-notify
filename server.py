@@ -11,11 +11,11 @@ dispatcher = updater.dispatcher
 def test(update:Update, context:CallbackContext):
 	bot.send_message(
 		chat_id = update.effective_chat.id,
-		text="Hey Aishoo. Will update you with the orders details",
+		text="No orders yet",
 	)
 
 
-start_value = CommandHandler('oi', test)
+start_value = CommandHandler('get-orders', test)
 
 dispatcher.add_handler(start_value)
 
