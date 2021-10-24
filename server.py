@@ -15,8 +15,9 @@ def test(update:Update, context:CallbackContext):
 	)
 
 
-start_value = CommandHandler('get-orders', test)
+start_value = CommandHandler('orders', test)
 
 dispatcher.add_handler(start_value)
 
 updater.start_polling()
+print('Oddlymade Telegram bot running')
